@@ -10,8 +10,6 @@ import firebase_admin
 from blueprint import example_blueprint
 from decorator import token_required
 
-# Initialize Flask App
-# Initialize Firestore DB
 
 app = Flask(__name__)
 app.register_blueprint(example_blueprint, url_prefix="/api/")
