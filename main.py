@@ -32,6 +32,7 @@ def token_required(f):
          return jsonify({'message': 'a valid token is missing'})
 
       print(token)
+      print('hii')
       # if not firebase_admin._apps:
       #   default_app = initialize_app(cred)
       # db = firestore.client()
