@@ -62,18 +62,14 @@ def update():
 @example_blueprint.route('/list', methods=['GET'])
 @token_required
 def read():
-    print('came')
     try:
-        print('came down')
         if request.is_json:
-            print('came still')
             id = request.json.get('id', None) 
             if id:
                 todo = table_ref.document(str(id)).get()
                 print(todo.to_dict())
                 return jsonify(todo.to_dict()), 200
 
-        print('hissssi')
         all_todos = [doc.to_dict() for doc in table_ref.stream()]
         return jsonify(all_todos), 200
     except Exception as e:
