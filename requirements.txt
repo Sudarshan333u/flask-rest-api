@@ -1,0 +1,5 @@
+Flask==1.1.2
+gunicorn==20.0.4
+uuid==1.30
+PyJWT==2.0.1
+firebase-admin==4.5.1
